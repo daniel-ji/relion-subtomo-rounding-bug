@@ -1,5 +1,7 @@
 # RELION Subtomogram Extraction Bug: Tomogram Centering Discrepancy (Integer vs. Float Division)
 
+If the user does not specify tomogram dimensions in the tomograms.star starfile, there can be a discrepancy in the centering of the particle during subtomogram extraction, causing a 0.5px shift on the scale of the tomogram, which can cause possibly noticable negative effects on downstream processing. 
+
 ## Bug Description
 
 When extracting subtomograms, as the first transformation as part of the set of 3D affine transformations to generate the projection matrix (to project 3d pixel coordinates to 2D pixel coordinates to then crop), RELION does a centering of the tomogram, which is reliant on the tomogram dimensions. https://github.com/3dem/relion/blob/master/src/jaz/tomography/tomogram.cpp#L17-64 :
