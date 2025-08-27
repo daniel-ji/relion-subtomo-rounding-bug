@@ -1,6 +1,6 @@
 # RELION Subtomogram Extraction Bug: Tomogram Centering Discrepancy (Integer vs. Float Division)
 
-If the user does not specify tomogram dimensions in the tomograms.star starfile, there can be a discrepancy in the centering of the particle during subtomogram extraction, causing a 0.5px shift on the scale of the tomogram, which can cause possibly noticable negative effects on downstream processing. 
+If the user does not specify tomogram dimensions in the tomograms.star starfile, there can be a discrepancy in the centering of the tomogram during subtomogram extraction, causing a 0.5px shift, which can cause possibly noticable negative effects on downstream processing. 
 
 ## Bug Description
 
